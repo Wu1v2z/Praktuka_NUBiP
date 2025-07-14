@@ -1,1 +1,1 @@
-This repository was created to upload tasks/files with C code that we were assigned to perform in practice. In the main part there will be individual tasks, and in the second part - teamwork that was done together with Gorobets A.B.
+This repository was created to upload tasks/files with C code that we were assigned to perform in practice. In the main part there will be individual tasks, and in the second part - teamwork that was done together with Gorobets A.B. and Dovgopolyi O.X.
