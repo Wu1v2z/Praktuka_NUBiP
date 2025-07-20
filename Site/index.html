@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Головна | Dating Service</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fdfdfd;
+    }
+
+    /* Навігаційна панель */
+    .navbar {
+      background-color: #ff4d6d;
+      padding: 15px 20px;
+      display: flex;
+      align-items: flex-start;
+      position: relative;
+    }
+
+    .dropdown {
+      position: relative;
+    }
+
+    .dropbtn {
+      background-color: #fff;
+      color: #ff4d6d;
+      padding: 10px 16px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .dropbtn:hover {
+      background-color: #ffe0e7;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 50px;
+      left: 0;
+      background-color: #fff;
+      min-width: 160px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      z-index: 1;
+      overflow: hidden;
+    }
+
+    .dropdown-content a {
+      color: #ff4d6d;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      transition: background-color 0.3s ease;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #ffe0e7;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+
+
+    
+  <div class="navbar">
+    <div class="dropdown">
+      <button class="dropbtn">Категорії</button>
+      <div class="dropdown-content">
+        <a href="#">Профіль</a>
+        <a href="#">Поруч</a>
+        <a href="#">Пошук</a>
+        <a href="#">Інтереси</a>
+      </div>
+    </div>
+  </div>
+  
+<div class="avatar-container">
+  <div class="avatar-wrapper" onclick="toggleMenu()">
+    <img src="avatar.jpg" alt="Аватар користувача" class="avatar-img">
+  </div>
+
+  <div class="avatar-menu" id="avatarMenu">
+    <a href="#">Мій профіль</a>
+    <a href="#">Налаштування</a>
+    <a href="#">Вийти</a>
+  </div>
+</div>
+
+
+
+</body>
+</html>
