@@ -22,11 +22,14 @@ learnMore.addEventListener('click', ()=>alert('Легко, приємно і б�
 // sample data
 const people = [
   {id:1,name:'Оля',age:27,photo:'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&q=60&w=800&fit=crop',bio:'Кавоманка, люблю мандри і котів.'},
-  {id:2,name:'Артур',age:18,photo:'https://i.postimg.cc/5tzt1xTy/photo-2025-09-24-00-06-33.jpg',bio:'зібра весь букет,але не квітів'},
+  {id:2,name:'Артур',age:18,photo:'https://i.postimg.cc/5tzt1xTy/photo-2025-09-24-00-06-33.jpg',bio:'забрав весь букет,але не квітів'},
   {id:4,name:'Артем',age:18,photo:'https://i.postimg.cc/kMQtKyjG/photo-2025-09-24-00-01-00.jpg',bio:'Люблю гори та фотографію.'},
   {id:5,name:'Денис',age:18,photo:'https://i.postimg.cc/Vk1gX6BQ/photo-2025-09-24-00-01-36.jpg',bio:'готовий до серйозних стосунків'},
-  {id:6,name:'Олександр',age:18,photo:'https://i.postimg.cc/3RPNQsfY/photo-2025-09-23-23-45-24.jpg',bio:'шукаю ту саму'}
-];
+  {id:6,name:'Олександр',age:18,photo:'https://i.postimg.cc/3RPNQsfY/photo-2025-09-23-23-45-24.jpg',bio:'шукаю ту саму'},
+  {id:7,name:'Катя',age:19,photo:'https://i.postimg.cc/wT8q98Hb/4578888.png',bio:'Саша,я тебе чекаю))'},
+  {id:8,name:'Софія',age:20,photo:'https://i.postimg.cc/brRBXtqP/eva-elfi-93.webp',bio:'люблю знімати відео та фотографуватися'},
+  {id:9,name:'Анжела',age:67,photo:'https://i.postimg.cc/TPRhf8jX/5f6373d2e0cd9.jpg',bio:'Денис, я готова'},
+]; 
 
 const peopleGrid = document.getElementById('peopleGrid');
 const searchInput = document.getElementById('searchInput');

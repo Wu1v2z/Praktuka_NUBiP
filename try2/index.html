@@ -88,21 +88,74 @@
       </section>
 
       <!-- Profile -->
-      <section id="profile" style="display:none;margin-top:18px">
-        <div class="card" style="display:flex;gap:18px;align-items:flex-start">
-          <div style="flex:0 0 260px">
-            <div class="avatar" id="profileAvatar" style="width:100%;height:320px;background-size:cover"></div>
-          </div>
-          <div style="flex:1">
-            <h2 id="profileName">Ім'я, Вік</h2>
-            <p id="profileBio" style="color:#374151;line-height:1.5">Короткий опис користувача. Розкажіть про інтереси, хобі та те, що важливо для вас.</p>
-            <div style="margin-top:16px;display:flex;gap:10px">
-              <button class="btn btn-like">Поставити лайк</button>
-              <button class="btn btn-msg">Написати</button>
-            </div>
+      <!-- Profile -->
+<section id="profile" style="display:none;margin-top:18px">
+  <div class="card" style="display:flex;gap:18px;align-items:flex-start;flex-direction:column">
+    
+    <!-- Форма редагування -->
+    <div style="flex:1; width:100%">
+      <h2>Редагувати профіль</h2>
+      <div style="display:flex;gap:18px;flex-wrap:wrap;align-items:flex-start">
+
+        <!-- Фото -->
+        <div style="flex:0 0 260px; display:flex;flex-direction:column;align-items:center">
+          <div class="avatar" id="profileAvatar" style="width:100%;height:320px;background-size:cover;background-position:center;background-image:url('https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&q=60&w=600&fit=crop')"></div>
+          <input type="file" id="avatarInput" style="margin-top:10px" accept="image/*">
+        </div>
+
+        <!-- Інфо -->
+        <div style="flex:1; display:flex; flex-direction:column; gap:12px">
+          <input type="text" id="editName" placeholder="Ім'я" style="padding:10px; border-radius:10px; border:1px solid #ccc; width:100%">
+          <input type="number" id="editAge" placeholder="Вік" style="padding:10px; border-radius:10px; border:1px solid #ccc; width:100%">
+          <input type="text" id="editCity" placeholder="Місто" style="padding:10px; border-radius:10px; border:1px solid #ccc; width:100%">
+          <textarea id="editBio" placeholder="Про себе" style="padding:10px; border-radius:10px; border:1px solid #ccc; width:100%; min-height:80px"></textarea>
+
+          <div style="display:flex;gap:10px;margin-top:10px">
+            <button class="btn btn-like" id="saveProfile">Зберегти</button>
+            <button class="btn btn-msg" id="cancelProfile">Скасувати</button>
           </div>
         </div>
-      </section>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<script>
+  const avatarInput = document.getElementById('avatarInput');
+  const profileAvatar = document.getElementById('profileAvatar');
+  const editName = document.getElementById('editName');
+  const editAge = document.getElementById('editAge');
+  const editCity = document.getElementById('editCity');
+  const editBio = document.getElementById('editBio');
+  const saveProfile = document.getElementById('saveProfile');
+
+  // Загрузка фото
+  avatarInput.addEventListener('change', (e)=>{
+    const file = e.target.files[0];
+    if(file){
+      const reader = new FileReader();
+      reader.onload = function(ev){
+        profileAvatar.style.backgroundImage = `url('${ev.target.result}')`;
+      }
+      reader.readAsDataURL(file);
+    }
+  });
+
+  // Зберегти 
+  saveProfile.addEventListener('click', ()=>{
+    const name = editName.value || 'Ім\'я';
+    const age = editAge.value || 'Вік';
+    const city = editCity.value || 'Місто';
+    const bio = editBio.value || 'Про себе';
+    
+    document.getElementById('profileName').textContent = `${name}, ${age} — ${city}`;
+    document.getElementById('profileBio').textContent = bio;
+
+    alert('Профіль оновлено!');
+  });
+</script>
 
       <!-- Chats -->
       <section id="chats" style="display:none;margin-top:18px">
