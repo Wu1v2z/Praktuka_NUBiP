@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>KISSme</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <div class="logo">♥</div>
+      <div>
+        <div style="font-size:16px">KISSme</div>
+        <div style="font-size:12px;opacity:.9">Знайди свою людину поруч</div>
+      </div>
+    </div>
+    <nav>
+      <a href="#" data-route="home">Головна</a>
+      <a href="#" data-route="search">Пошук</a>
+      <a href="#" data-route="chats">Чати</a>
+      <a href="#" data-route="profile">Профіль</a>
+    </nav>
+    <button class="cta" id="startBtn">Почати знайомства</button>
+  </header>
+
+  <main>
+    <div class="container">
+      <!-- Home -->
+      <section id="home" class="hero fade-in">
+        <div>
+          <h1 class="title">KISSme — знайомства поруч і в серці</h1>
+          <p>Швидкий, милий та без зайвих складнощів. Додай фото, напиши пару слів — і починай нові знайомства вже сьогодні.</p>
+          <div class="start">
+            <button class="cta" id="heroStart">Почати знайомства</button>
+            <button class="btn btn-light" id="learnMore">Дізнатись більше</button>
+          </div>
+
+          <div style="margin-top:20px;display:flex;gap:12px;flex-wrap:wrap">
+            <div class="card" style="min-width:220px;flex:1">
+              <div class="profile-card">
+                <div class="avatar" style="background-image:url('https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&q=60&w=600&fit=crop')"></div>
+                <div class="meta">
+                  <h3>Оля, 27</h3>
+                  <p>Люблю подорожі, каву і вечірні прогулянки містом.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="card" style="min-width:220px;flex:1">
+              <div class="profile-card">
+                <div class="avatar" style="background-image:url('https://images.unsplash.com/photo-1545996124-1f5fa3d0d5b0?auto=format&q=60&w=600&fit=crop')"></div>
+                <div class="meta">
+                  <h3>Макс, 30</h3>
+                  <p>Музикант, готую краще, ніж виглядаю ;)</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="card" style="text-align:center">
+            <h3 style="margin:6px 0 10px">Знайомства поруч</h3>
+            <p style="margin:0 0 14px;color:#374151">Оберіть фільтр, перегляньте профілі — і напишіть першими. Спробуйте прямо зараз.</p>
+            <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&q=60&w=800&fit=crop" alt="hero" style="width:100%;border-radius:10px;box-shadow:var(--soft-shadow);margin-top:8px">
+          </div>
+        </div>
+      </section>
+
+      <!-- Search -->
+      <section id="search" style="display:none;margin-top:18px">
+        <div style="display:flex;gap:12px;align-items:center;margin-bottom:12px">
+          <div style="flex:1">
+            <input id="searchInput" placeholder="Пошук за іменем або інтересом" style="width:100%;padding:12px;border-radius:12px;border:0;box-shadow:var(--soft-shadow)">
+          </div>
+          <select id="ageFilter" style="padding:10px;border-radius:10px;border:0;box-shadow:var(--soft-shadow)">
+            <option value="any">Вік: будь-який</option>
+            <option value="20-25">20—25</option>
+            <option value="26-30">26—30</option>
+            <option value="31-40">31—40</option>
+          </select>
+        </div>
+
+        <div class="grid" id="peopleGrid">
+          <!-- cards injected by JS -->
+        </div>
+      </section>
+
+      <!-- Profile -->
+      <section id="profile" style="display:none;margin-top:18px">
+        <div class="card" style="display:flex;gap:18px;align-items:flex-start">
+          <div style="flex:0 0 260px">
+            <div class="avatar" id="profileAvatar" style="width:100%;height:320px;background-size:cover"></div>
+          </div>
+          <div style="flex:1">
+            <h2 id="profileName">Ім'я, Вік</h2>
+            <p id="profileBio" style="color:#374151;line-height:1.5">Короткий опис користувача. Розкажіть про інтереси, хобі та те, що важливо для вас.</p>
+            <div style="margin-top:16px;display:flex;gap:10px">
+              <button class="btn btn-like">Поставити лайк</button>
+              <button class="btn btn-msg">Написати</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Chats -->
+      <section id="chats" style="display:none;margin-top:18px">
+        <div class="card">
+          <h3 style="margin-top:0">Чати</h3>
+          <div class="chats" id="chatsList">
+            <!-- chat items injected by JS -->
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>© 2025 KISSme — Просте місце для нових знайомств</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
