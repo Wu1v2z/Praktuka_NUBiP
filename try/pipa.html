@@ -135,34 +135,11 @@
             <button class="btn btn-light" id="learnMore">Дізнатись більше</button>
           </div>
 
-          <div style="margin-top:20px;display:flex;gap:12px;flex-wrap:wrap">
-            <div class="card" style="min-width:220px;flex:1">
-              <div class="profile-card">
-                <div class="avatar" style="background-image:url('https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&q=60&w=600&fit=crop')"></div>
-                <div class="meta">
-                  <h3>Оля, 27</h3>
-                  <p>Люблю подорожі, каву і вечірні прогулянки містом.</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="card" style="min-width:220px;flex:1">
-              <div class="profile-card">
-                <div class="avatar" style="background-image:url('https://images.unsplash.com/photo-1545996124-1f5fa3d0d5b0?auto=format&q=60&w=600&fit=crop')"></div>
-                <div class="meta">
-                  <h3>Макс, 30</h3>
-                  <p>Музикант, готую краще, ніж виглядаю ;)</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
 
         <div>
           <div class="card" style="text-align:center">
             <h3 style="margin:6px 0 10px">Знайомства поруч</h3>
             <p style="margin:0 0 14px;color:#374151">Оберіть фільтр, перегляньте профілі — і напишіть першими. Спробуйте прямо зараз.</p>
-            <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&q=60&w=800&fit=crop" alt="hero" style="width:100%;border-radius:10px;box-shadow:var(--soft-shadow);margin-top:8px">
           </div>
         </div>
       </section>
@@ -171,13 +148,13 @@
       <section id="search" style="display:none;margin-top:18px">
         <div style="display:flex;gap:12px;align-items:center;margin-bottom:12px">
           <div style="flex:1">
-            <input id="searchInput" placeholder="Пошук за іменем або інтересом" style="width:100%;padding:12px;border-radius:12px;border:0;box-shadow:var(--soft-shadow)">
+            <input id="searchInput" placeholder="Люди поруч" style="width:100%;padding:12px;border-radius:12px;border:0;box-shadow:var(--soft-shadow)">
           </div>
           <select id="ageFilter" style="padding:10px;border-radius:10px;border:0;box-shadow:var(--soft-shadow)">
-            <option value="any">Вік: будь-який</option>
-            <option value="20-25">20—25</option>
-            <option value="26-30">26—30</option>
-            <option value="31-40">31—40</option>
+            <option value="any">Місто</option>
+            <option value="Київ">Київ</option>
+            <option value="Львів">Львів</option>
+            <option value="Харьків">Харьків</option>
           </select>
         </div>
 
@@ -243,7 +220,7 @@
     // sample data
     const people = [
       {id:1,name:'Оля',age:27,photo:'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&q=60&w=800&fit=crop',bio:'Кавоманка, люблю мандри і котів.'},
-      {id:2,name:'Артур',age:18,photo:'https://i.postimg.cc/5tzt1xTy/photo-2025-09-24-00-06-33.jpg',bio:'зібра весь букет,але не квітів'},
+      {id:2,name:'Артур',age:18,photo:'https://i.postimg.cc/5tzt1xTy/photo-2025-09-24-00-06-33.jpg',bio:'зібрав весь букет,але не квітів'},
       {id:4,name:'Артем',age:18,photo:'https://i.postimg.cc/kMQtKyjG/photo-2025-09-24-00-01-00.jpg',bio:'Люблю гори та фотографію.'},
       {id:5,name:'Денис',age:18,photo:'https://i.postimg.cc/Vk1gX6BQ/photo-2025-09-24-00-01-36.jpg',bio:'готовий до серйозних стосунків'},
       {id:6,name:'Олександр',age:18,photo:'https://i.postimg.cc/3RPNQsfY/photo-2025-09-23-23-45-24.jpg',bio:'шукаю ту саму'}
