@@ -107,7 +107,7 @@ ageFilter.addEventListener('change', applyFilters);
 const chatsList = document.getElementById('chatsList');
 const chats = [
   {name:'Оля',last:'Готова зустрітись цього тижня?',photo:people[0].photo},
-  {name:'Макс',last:'Я відправив трек — послухай :)',photo:people[1].photo}
+  {name:'Артур',last:'Я відправив трек — послухай :)',photo:people[1].photo}
 ];
 function renderChats(){
   chatsList.innerHTML='';
