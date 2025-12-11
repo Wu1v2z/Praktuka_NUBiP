@@ -1,1 +1,4 @@
-This repository was created to upload tasks/files with C code that we were assigned to perform in practice. In the main part there will be individual tasks, and in the second part - teamwork that was done together with Gorobets A.B.
+# Praktuka NUBiP
+
+This repository contains completed https://elearn.nubip.edu.ua/mod/assign/view.php?id=546982 task. The work was done in team with Horobest A.B, Kumanovski A.O, Dovhopolyi O.R.
+
